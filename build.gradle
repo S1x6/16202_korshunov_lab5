@@ -17,7 +17,7 @@ jar {
                 'Main-Class': 'client.Main'
         )
     }
-    baseName = 'lab4Client'
+    baseName = 'lab5Client'
     version =  '0.1'
     from {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }

@@ -2,9 +2,11 @@ package model.json;
 
 public class MessageSendObject {
     private String message;
+    private String name;
 
-    public MessageSendObject(String message) {
+    public MessageSendObject(String message, String name) {
         this.message = message;
+        this.name = name;
     }
 
     public String getMessage() {
@@ -13,5 +15,13 @@ public class MessageSendObject {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }

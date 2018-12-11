@@ -36,10 +36,10 @@ public class ApiHandler {
         return okhttp.newCall(request).execute();
     }
 
-    public void sendMessage(String message) {
+   /* public void sendMessage(String message) {
         RequestBody body = RequestBody.create(MediaType.get("application/json"), JSONParser.encodeMessage(message));
         Request request = new Request.Builder()
-                .url("http://" + baseUrl + "/messages")
+                .url("ws://localhost:8081/messages")
                 .header("Authorization", Model.getInstance().getUser().getToken())
                 .method("POST", body)
                 .build();
@@ -56,7 +56,7 @@ public class ApiHandler {
                 }
             }
         });
-    }
+    }*/
 
     public Response sendLogout() throws IOException {
         RequestBody body = RequestBody.create(MediaType.get("application/json"), "");

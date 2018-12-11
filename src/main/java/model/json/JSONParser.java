@@ -18,8 +18,8 @@ public class JSONParser {
         return gson.fromJson(json, LoginInfoObject.class);
     }
 
-    public synchronized static String encodeMessage(String message) {
-        return gson.toJson(new MessageSendObject(message), MessageSendObject.class);
+    public synchronized static String encodeMessage(String message, String name) {
+        return gson.toJson(new MessageSendObject(message, name), MessageSendObject.class);
     }
 
     public synchronized static MessageListObject decodeMessages(String json) {
@@ -30,4 +30,7 @@ public class JSONParser {
         return gson.fromJson(json, UserListObject.class);
     }
 
+    public synchronized static MessageObject decodeMessage(String text) {
+        return gson.fromJson(text, MessageObject.class);
+    }
 }
